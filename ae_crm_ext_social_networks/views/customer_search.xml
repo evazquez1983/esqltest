@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <template id="assets_backend" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/ae_crm_ext_social_networks/static/src/js/customer_search.js"></script>
+            </xpath>
+        </template>
+
+        <template id="website_search_customer_form" inherit_id="website.layout">
+            <xpath expr="//header" position="after">
+                <div id="search_customer_form">
+                    <input type="text" id="search_customer_input" placeholder="Search by Name or Social Accounts"/>
+                    <button id="search_customer_button" type="button">Search</button>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="base_view_partner_filter" model="ir.ui.view">
+            <field name="name">base.view.partner.filter</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+               <xpath expr="//search/filter[@name='type_company']" position="after">
+                   <field name="is_complete_profile" />
+                  <filter string="with Complete Profile" name="is_complete_profile" icon="terp-personal" domain="[('is_complete_profile','=',True)]"/>
+
+              </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

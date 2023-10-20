@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <record id="base_view_partner_form" model="ir.ui.view">
+            <field name="name">base.view.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside" >
+                    <page string="Social Networks">
+                        <field name="is_complete_profile" readonly="True" invisible="True"/>
+
+                        <div class="oe_input_group">
+                            <span class="fa fa-facebook oe_input_icon"></span>
+                            <div>
+                                <label for="facebook_url" class="oe_form_label">Facebook</label>
+                                <field name="facebook_url" widget="url" class="oe_no_button" placeholder="Ingrese la URL de Facebook"/>
+                            </div>
+                        </div>
+
+                        <div class="oe_input_group">
+                            <span class="fa fa-linkedin oe_input_icon"></span>
+                            <div>
+                                <label for="linkedin_url" class="oe_form_label">LinkedIn</label>
+                                <field name="linkedin_url" widget="url" class="oe_no_button" placeholder="Ingrese la URL de LinkedIn"/>
+                            </div>
+                        </div>
+
+                        <div class="oe_input_group">
+                            <span class="fa fa-twitter oe_input_icon"></span>
+                            <div>
+                                <label for="twitter_url" class="oe_form_label">Twitter</label>
+                                <field name="twitter_url" widget="url" class="oe_no_button" placeholder="Ingrese la URL de Twitter"/>
+                            </div>
+                        </div>
+
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

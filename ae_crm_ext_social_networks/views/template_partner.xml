@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <template id="customer_page" name="Página de Clientes">
+            <t t-call="website.layout">
+                <div class="container">
+                    <h1>Our Customers</h1>
+                    <div class="row">
+                        <t t-foreach="customers" t-as="customer">
+                            <div class="col-md-4">
+                                <div class="customer-card">
+                                    <h3><t t-esc="customer.name"/></h3>
+                                    <ul>
+                                        <li>
+                                            <a t-if="customer.facebook_url" t-att-href="customer.facebook_url" target="_blank">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a t-if="customer.twitter_url" t-att-href="customer.twitter_url" target="_blank">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a t-if="customer.linkedin_url" t-att-href="customer.linkedin_url" target="_blank">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
